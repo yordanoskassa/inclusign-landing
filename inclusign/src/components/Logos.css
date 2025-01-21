@@ -1,0 +1,54 @@
+/* Parent container to hide overflow */
+@font-face {
+    font-family: 'Mouser';
+    src: url('../assets/mouser.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.logos-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* hide the overflowing sliding row */
+    padding: 1rem 0;
+  }
+  
+  /* The sliding row of logos */
+  .logos-slide {
+    display: flex;
+    gap: 3.6rem; /* space between logos */
+    width: fit-content; /* let it shrink-wrap the contents */
+    animation: scrollLeft 15s linear infinite;
+  }
+  
+  /* Each logo item */
+  .logo-item img {
+    height: 50px; /* adjust to desired height */
+    width: auto;  /* maintain aspect ratio */
+    object-fit: contain;
+    
+  }
+  
+  /* Optional styles for the heading */
+  .logos-carousel h2 {
+    font-family: 'Mouser', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    color: #000;
+    text-align: center;
+
+
+
+  }
+  
+  /* Keyframes for infinite horizontal scroll */
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* Move left enough that half the logos are hidden,
+         because we've duplicated them, it loops seamlessly. */
+      transform: translateX(-50%);
+    }
+  }
+  

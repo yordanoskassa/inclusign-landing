@@ -1,0 +1,44 @@
+.product-demo-section {
+    padding: 4rem 0;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+  
+  .demo-wrapper {
+    margin: 2rem auto;
+    max-width: 800px;
+  }
+  
+  /* The container that holds the background shape and video */
+  .video-container {
+    position: relative; /* allows absolutely positioned child */
+    display: inline-block; /* shrink-wrap to fit the video */
+  }
+  
+  /* The offset background shape */
+  .video-bg {
+    position: absolute;
+    top: 20px;   /* offset to create a "purposefully out-of-place" look */
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: #21b6a8; /* choose your color */
+    z-index: 0;
+    /* You can also slightly scale it to be bigger than the video */
+    transform: scale(0.75rem);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* The video element itself */
+  .demo-video {
+    width: 100%;
+    position: relative;  /* ensures this is above the .video-bg */
+    z-index: 0;
+  }
+  

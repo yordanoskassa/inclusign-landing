@@ -1,0 +1,87 @@
+
+/* 1. Import the custom font (adjust path as needed) */
+@font-face {
+  font-family: 'Mouser';
+  src: url('../assets/mouser.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.hero-section {
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    align-items: flex-start; 
+    justify-content: center;
+    padding: 8rem 1rem; 
+    background-color: #21b6a8; /* Matches header background */
+  }
+  
+  /* Hero Content (Text, CTAs) */
+  .hero-content {
+    max-width: 600px; /* Adjust for desired text width */
+    margin: 0 auto;   /* Centers content horizontally on large screens */
+    text-align: left;
+  }
+  
+  .hero-content h1 {
+    font-family: 'Mouser', sans-serif;
+    font-size: 2.5rem; /* Adjust as desired */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #2f2f2f;
+    max-width: 480px; /* Restrict paragraph width for readability */
+  }
+  
+  /* CTA Buttons Container */
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Optional: If you have an illustration or image */
+  .hero-illustration {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem; /* Spacing if stacked on small screens */
+  }
+  
+  .hero-illustration img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Reuse or override .btn classes from your Header.css (if needed) */
+  .btn {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+  }
+  
+  .btn-white {
+    background-color: #fff;
+    color: rgb(255, 255, 255)fff;
+  }
+  
+  .btn-white:hover {
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  .btn-black {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .btn-black:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+  }
+  

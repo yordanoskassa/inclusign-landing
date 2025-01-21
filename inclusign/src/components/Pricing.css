@@ -1,0 +1,145 @@
+/* Container helper class */
+@font-face {
+    font-family: 'Mouser';
+    src: url('../assets/mouser.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Pricing Section */
+  .pricing-section {
+    padding: 4rem 1rem;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  /* Section Title and Subtitle */
+  .section-title {
+    font-family: 'Mouser', sans-serif;
+
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000000;
+    font-weight: 700;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #262626;
+    margin-bottom: 3rem;
+  }
+  
+  /* Pricing Grid */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 2rem;
+  }
+  
+  /* Individual Pricing Cards */
+  .pricing-card {
+    background-color: #21b6a8;
+    border: 0px solid #ccb9b9; /* Adjusted border color */
+    padding: 2rem 1rem;
+    position: relative;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transform transition */
+  }
+  
+  .pricing-card:hover {
+    box-shadow: 0 8px 20px rgba(133, 133, 133, 0.15);
+  }
+  
+  /* Featured card styling */
+  .pricing-featured {
+    background-color: #21b6a8; /* Light gray background for contrast */
+    border: 0px solid #222222; /* Slightly thicker border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card Title */
+  .pricing-card-title {
+    font-family: 'Mouser', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #000000;
+    font-weight: 600;
+  }
+  
+  /* Price */
+  .price {
+    font-family: 'Mouser', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff; /* Highlighted color */
+  }
+  
+  .price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    margin-left: 0.3rem;
+  }
+  
+  /* Feature List */
+  .pricing-features {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  
+  .pricing-features li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .pricing-features li::before {
+    content: '■'; /* Checkmark icon */
+    color: #ebebeb;
+    margin-right: 0.5rem;
+  }
+  
+  /* Pricing Buttons */
+  .btn-pricing {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-pricing:hover {
+    background-color: #191919; /* Darker shade on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+  }
+  
+  /* Featured button variation */
+  .featured-btn {
+    background-color: #000000;
+    color: #fff;
+
+  }
+  
+  .featured-btn:hover {
+    background-color: #252525;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .pricing-grid {
+      grid-template-columns: 1fr; /* Single column on small devices */
+    }
+  }
+  

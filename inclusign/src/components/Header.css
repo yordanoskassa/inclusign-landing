@@ -1,0 +1,171 @@
+/* ------------------------------ */
+/* Base Header Styles            */
+/* ------------------------------ */
+
+.header {
+    background-color: #21b6a8; /* Light tan color */
+    padding: 1rem 2rem;
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Ensure the header is on top */
+    /* Smooth transition for background color when scrolling */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Change background to white when scrolling */
+  .header.scrolled {
+    background-color: #fff;
+  }
+  
+  /* Navigation Bar Layout */
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; /* Adjusted for better alignment */
+  }
+  
+  /* Logo */
+  .nav-brand .brand-logo {
+    width: 10rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-brand .brand-logo:hover {
+    transform: scale(1.01);
+  }
+  
+  /* ------------------------------ */
+  /* Desktop Navigation Links      */
+  /* ------------------------------ */
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Nav Links Items */
+  .nav-links li {
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .nav-links li:hover {
+    color: #000;
+    transform: translateY(-3px);
+  }
+  
+  /* CTA Buttons Container */
+  .nav-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  
+  /* Buttons */
+  .btn {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-white {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .btn-white:hover {
+    background-color: #f0f0f0;
+    color: #000;
+    transform: translateY(-3px);
+  }
+  
+  .btn-black {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .btn-black:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+  }
+  
+  /* ------------------------------ */
+  /* Hamburger Menu Icon (Mobile)  */
+  /* ------------------------------ */
+  
+  .hamburger {
+    display: none; /* Hide on desktop by default, show on mobile */
+    background: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 1.5rem;
+    width: 2rem;
+    padding: 0;
+    margin-left: auto; /* Align to the right */
+    font-weight: bold; /* Make it bold */
+  }
+  
+  .bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* ------------------------------ */
+  /* Responsive Media Queries      */
+  /* ------------------------------ */
+  
+  /* Example breakpoint at 768px */
+  @media (max-width: 768px) {
+    /* Show the hamburger, hide the nav links */
+    .hamburger {
+      display: flex; 
+    }
+  
+    /* .nav-links defaults to hidden on mobile */
+    .nav-links {
+      position: absolute;
+      top: 64px; /* Just below header (adjust as needed) */
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: #21b6a8; /* Match header default or #fff if scrolled */
+      padding: 1rem 0;
+      display: none; /* Hide by default */
+      align-items: center; /* Center text */
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  
+    /* .nav-links.open is shown when user toggles hamburger */
+    .nav-links.open {
+      display: flex;
+    }
+  
+    /* Ensure nav-actions (buttons) also collapses or repositions if desired */
+    .nav-actions {
+      display: none; /* Hide or move them inside the mobile menu if you want them visible */
+    }
+  }
+  
+  /* Optional: Another breakpoint example at 1024px */
+  @media (max-width: 1024px) {
+
+    .nav-actions {
+      justify-content: center; /* Ensure buttons stay centered in larger viewports */
+    }
+  }
+  

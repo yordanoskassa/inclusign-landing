@@ -1,0 +1,114 @@
+/* Container helper class */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* 
+     About Section with a gradient background 
+     + wavy shape on top (optional)
+  */
+  .about-section {
+    padding: 4rem 1.5rem;
+    background: linear-gradient(135deg, #eef3f9 0%, #fff 80%);
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+  }
+  
+  /* Optional: wave effect at the top of the about section
+     You can replace the wave SVG path with any shape you like 
+  */
+  .about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23f8e9cf" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,224C384,224,480,256,576,261.3C672,267,768,245,864,218.7C960,192,1056,160,1152,165.3C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') 
+      no-repeat center/cover;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #000;
+  }
+  
+  /* Subsections */
+  .about-mission,
+  .about-story,
+  .about-approach,
+  .about-vision {
+    margin-bottom: 3rem;
+  }
+  
+  /* Headings */
+  .about-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+  
+  /* Paragraphs */
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  
+  /* Lists */
+  .about-section ul {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .about-section li {
+    margin-bottom: 0.75rem;
+    list-style-type: disc;
+    transition: transform 0.3s ease;
+  }
+  
+  .about-section li:hover {
+    transform: translateX(5px);
+  }
+  
+  /* Animate elements on scroll */
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out; /* Duration & easing for the fade-in */
+  }
+  
+  .fade-in-visible {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 3rem 1rem;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+  
+    .about-section h3 {
+      font-size: 1.2rem;
+    }
+  
+    .about-section p,
+    .about-section li {
+      font-size: 0.95rem;
+    }
+  }
+  

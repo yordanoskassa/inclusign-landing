@@ -1,0 +1,121 @@
+/* ======== Container for the entire feature carousel ======== */
+
+@font-face {
+    font-family: 'Mouser';
+    src: url('../assets/mouser.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.features-section {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* adjust as needed */
+  height: 450px;     /* fixed height for the carousel; tweak to your design */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* ======== Each Slide ======== */
+.feature-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex; /* side-by-side layout for text and image */
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  box-sizing: border-box;
+
+
+}
+
+/* Show the active slide by bringing it into view from the right */
+.feature-slide.active {
+  transform: translateX(0);
+  z-index: 1;
+}
+
+/* You can optionally hide inactive slides for clarity */
+.feature-slide.inactive {
+  /* If you'd like them hidden to avoid overlap:
+     display: none;
+   */
+}
+
+/* ======== Left side: Text Container ======== */
+.feature-text-container {
+  width: 50%;
+  background-color: #ffffff;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  /* Start text invisible; fade in when the slide is active */
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* When the slide is active, fade the text in */
+.feature-slide.active .feature-text-container {
+  opacity: 1;
+}
+
+.feature-text-container h3 {
+  font-family: 'Mouser', sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #000;
+}
+
+.feature-text-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* MUI icons */
+.feature-icon {
+  font-size: 3rem !important;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* If you want a CTA button inside text container */
+
+
+
+
+/* ======== Right side: Background Image ======== */
+.feature-image {
+  width: 45%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== Responsive Layout ======== */
+@media (max-width: 768px) {
+  .features-section {
+    height: auto; /* Let content dictate height on mobile */
+  }
+
+  .feature-slide {
+    position: relative; /* stack slides vertically (if you prefer) */
+    flex-direction: column;
+    transform: translateX(0); /* prevent off-screen on mobile */
+    margin-bottom: 2rem;
+  }
+
+  .feature-slide.inactive {
+    display: none; /* Hide inactive slides for a "1 at a time" effect */
+  }
+
+  .feature-text-container,
+  .feature-image {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
